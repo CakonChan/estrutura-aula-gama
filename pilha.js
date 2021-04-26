@@ -14,11 +14,16 @@ function push(num) {
     }
 }
 
+function estaVazia(){
+    return topo == -1;
+}
+
 function pop(){
     if (topo != -1) {
             let num = elemento[topo];
+            //topo = topo - 1;
             topo--;
-            return num
+            return num;
     } else {
         console.log('pilha esta vazia!');
     }
@@ -26,8 +31,27 @@ function pop(){
 
 // ---- Parte do codigo que usa a pilha --- //
 
+var numDecimal = 10;
+var resto;
+
+while (numDecimal != 0){
+    resto = parseInt(numDecimal % 2);
+    push(resto);
+    numDecimal = parseInt(numDecimal / 2);
+}
+
+while(!estaVazia()){
+    console.log(pop());
+}
+
+/*
 push(10);
 push(20);
 push(30);
 
 console.log(elemento + '\n');
+
+console.log(pop());
+console.log(pop());
+console.log(pop());
+*/
