@@ -34,12 +34,15 @@ function pop(){
 var numDecimal = 10;
 var resto;
 
+console.log('HORA DE EMPILHAR....');
 while (numDecimal != 0){
     resto = parseInt(numDecimal % 2);
     push(resto);
+    console.log(resto);
     numDecimal = parseInt(numDecimal / 2);
 }
 
+console.log('HORA DE DESEMPILHAR OU SEJA ELIMINAR DADOS...');
 while(!estaVazia()){
     console.log(pop());
 }
